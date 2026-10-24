@@ -7,12 +7,32 @@ References: (anything you checked to solve this)
 def get_letter():
     """ Add your own Docstring """
     # remove the default return and add your code
-    return ""
+    while True:
+     letter=input("Give an single uppercase letter: ")
+     if len(letter)!=1:
+      print("Error: it needs to be a single character.")
+      continue
+     elif letter not in ("A", "B", "C"):
+      print("Error: You provided the wrong character.")
+      continue
+     else:
+      return
+    
+
 
 def get_digit():
     """ Add your own Docstring """
     # remove the default return and add your code
-    return 0
+    while True:
+        digit=input("Give an single number character: ")
+        if not digit.isdigit():
+            print("Error: your input should be only digits.")
+            continue
+        elif digit not in ("1", "2", "3"):
+            print("Error: a single digit needs to be in [1,3].")
+            continue
+        else:
+            return
 
 
 def check_pattern(letter, digit, lst):
